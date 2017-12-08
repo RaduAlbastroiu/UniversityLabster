@@ -26,11 +26,7 @@ class DataManipulator {
     func getStudentFromDatabase() -> StudentCollection {
         
         // FIXME: populateCollection
-        let student = Student(firstName: "", lastName: "", yearOfStudy: 1,
-                              loginInfo: LoginInformation(email: "", password: ""),
-                              faculty: FacultyInformation(facultyName: "", facultySection: ""))
-        
-        let studentCollection: [Student] = [student, student]
+        let studentCollection: [Student] = Array()
         
         
         return StudentCollection(studentCollection: studentCollection)
