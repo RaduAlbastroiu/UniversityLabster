@@ -28,8 +28,9 @@ class DataManipulator {
         // FIXME: populateCollection
         let studentCollection: [Student] = Array()
         
-        
-        return StudentCollection(studentCollection: studentCollection)
+        let stdCollection: StudentCollection = StudentCollection()
+        stdCollection.studentCollection = studentCollection
+        return stdCollection
         
     }
 }

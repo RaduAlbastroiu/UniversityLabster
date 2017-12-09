@@ -42,13 +42,20 @@ class Student {
 }
 
 class StudentCollection {
-    var studentCollection: [Student]
+    var studentCollection: [Student] = Array()
     
-    // init
-    init(studentCollection: [Student] ) {
-        self.studentCollection = studentCollection
+    // FIXME: safer implementation required
+    func containsStudent(targetStudent: Student) -> Bool {
+        for student in studentCollection {
+            if student.firstName == targetStudent.firstName &&
+               student.lastName == targetStudent.lastName &&
+               student.yearOfStudy == targetStudent.yearOfStudy &&
+                student.loginInfo.email == student.loginInfo.email {
+                return true
+            }
+        }
+        return false
     }
-    
     
     // year collection
     func getColleaguesYearOf(student: Student) -> [Student] {
