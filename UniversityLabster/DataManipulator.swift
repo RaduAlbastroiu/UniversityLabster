@@ -12,12 +12,9 @@ import Firebase
 class Database {
 
     
-    init() {
-
-    }
 }
 
-class DataManipulator {
+class DataManipulator { 
     
     /// Sign in Proces
     func setStudentInfo(student: Student) {
