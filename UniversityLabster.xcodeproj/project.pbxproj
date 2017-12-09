@@ -15,6 +15,8 @@
 		83ED2C151FDAE632007A4B87 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED2C141FDAE632007A4B87 /* Student.swift */; };
 		83ED2C171FDAE7A3007A4B87 /* DataManipulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED2C161FDAE7A3007A4B87 /* DataManipulator.swift */; };
 		83ED2C191FDB49A6007A4B87 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ED2C181FDB49A6007A4B87 /* Lecture.swift */; };
+		83ED2C291FDBD3A5007A4B87 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83ED2C281FDBD3A5007A4B87 /* GoogleService-Info.plist */; };
+		98D78F965F614B61D3E55901 /* libPods-UniversityLabster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F96639C15531680FF247AB24 /* libPods-UniversityLabster.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		83ED2C141FDAE632007A4B87 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		83ED2C161FDAE7A3007A4B87 /* DataManipulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulator.swift; sourceTree = "<group>"; };
 		83ED2C181FDB49A6007A4B87 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		83ED2C281FDBD3A5007A4B87 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4735726FEBDDAF0F1F24F69 /* Pods-UniversityLabster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversityLabster.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniversityLabster/Pods-UniversityLabster.release.xcconfig"; sourceTree = "<group>"; };
+		D7D7CC05C48F00BEBEB0B8AF /* Pods-UniversityLabster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniversityLabster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniversityLabster/Pods-UniversityLabster.debug.xcconfig"; sourceTree = "<group>"; };
+		F96639C15531680FF247AB24 /* libPods-UniversityLabster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UniversityLabster.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98D78F965F614B61D3E55901 /* libPods-UniversityLabster.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EFC995D152EFC1C9F94423A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F96639C15531680FF247AB24 /* libPods-UniversityLabster.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		702A6018AB9B5F5D8D32D67B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7D7CC05C48F00BEBEB0B8AF /* Pods-UniversityLabster.debug.xcconfig */,
+				A4735726FEBDDAF0F1F24F69 /* Pods-UniversityLabster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		83ED2BF41FDAE309007A4B87 = {
 			isa = PBXGroup;
 			children = (
 				83ED2BFF1FDAE309007A4B87 /* UniversityLabster */,
 				83ED2BFE1FDAE309007A4B87 /* Products */,
+				702A6018AB9B5F5D8D32D67B /* Pods */,
+				1EFC995D152EFC1C9F94423A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +95,7 @@
 				83ED2C071FDAE309007A4B87 /* Assets.xcassets */,
 				83ED2C091FDAE309007A4B87 /* LaunchScreen.storyboard */,
 				83ED2C0C1FDAE309007A4B87 /* Info.plist */,
+				83ED2C281FDBD3A5007A4B87 /* GoogleService-Info.plist */,
 			);
 			path = UniversityLabster;
 			sourceTree = "<group>";
@@ -80,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83ED2C0F1FDAE309007A4B87 /* Build configuration list for PBXNativeTarget "UniversityLabster" */;
 			buildPhases = (
+				F042A1704183113F31AEF60B /* [CP] Check Pods Manifest.lock */,
 				83ED2BF91FDAE309007A4B87 /* Sources */,
 				83ED2BFA1FDAE309007A4B87 /* Frameworks */,
 				83ED2BFB1FDAE309007A4B87 /* Resources */,
+				CA85EF5CEE5B9DF6B4F52FA8 /* [CP] Embed Pods Frameworks */,
+				601BF41FE1A17A6C63B2183E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,12 +163,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				83ED2C0B1FDAE309007A4B87 /* LaunchScreen.storyboard in Resources */,
+				83ED2C291FDBD3A5007A4B87 /* GoogleService-Info.plist in Resources */,
 				83ED2C081FDAE309007A4B87 /* Assets.xcassets in Resources */,
 				83ED2C061FDAE309007A4B87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		601BF41FE1A17A6C63B2183E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniversityLabster/Pods-UniversityLabster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA85EF5CEE5B9DF6B4F52FA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniversityLabster/Pods-UniversityLabster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F042A1704183113F31AEF60B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UniversityLabster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83ED2BF91FDAE309007A4B87 /* Sources */ = {
@@ -284,6 +366,7 @@
 		};
 		83ED2C101FDAE309007A4B87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7D7CC05C48F00BEBEB0B8AF /* Pods-UniversityLabster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +383,7 @@
 		};
 		83ED2C111FDAE309007A4B87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4735726FEBDDAF0F1F24F69 /* Pods-UniversityLabster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
