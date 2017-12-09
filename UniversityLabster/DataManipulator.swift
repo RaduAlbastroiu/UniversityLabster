@@ -7,6 +7,15 @@
 //
 
 import Foundation
+import Firebase
+
+class Database {
+
+    
+    init() {
+
+    }
+}
 
 class DataManipulator {
     
